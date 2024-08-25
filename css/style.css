@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap'); * {
+    font-family: "Quicksand", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.themeText {
+    color: #3d5b4c;
+}
+
+.themeBack {
+    background-color: #3d5b4c;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.elipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.c-items .item {
+    position: relative;
+    background: #F4F6FA;
+    text-align: center;
+    border: 1px solid #F4F6FA;
+    border-radius: 10px;
+    padding: 40px 30px 28px 30px;
+    margin-bottom: 20px;
+    min-height: 215px;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.c-items .item :hover {
+    background: #fff;
+    border: 1px solid #BCE3C9;
+    -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.p-box:hover {
+    -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #BCE3C9;
+    transition: .2s;
+    -moz-transition: .2s;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+}
+
+.banner1 {
+    border-radius: 0.375rem;
+    /* The image used */
+    background-image: url("../img/banner1.jpg");
+
+  /* Set a specific height */
+    min-height: 300px;
+
+  /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.375rem;
+}
+.banner2 {
+    border-radius: 0.375rem;
+    /* The image used */
+    background-image: url("../img/contact.avif");
+
+  /* Set a specific height */
+    min-height: 300px;
+
+  /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.375rem;
+}
+
+.p-box img {
+    height: 300px;
+}
+
+.p-box .card-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

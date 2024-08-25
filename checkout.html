@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="fontawesome/css/all.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <title>Plant Palace</title>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="px-3 py-2  border-bottom">
+            <div class="container-fluid">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="index.html"
+                        class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                        <img src="img/logo.webp" class="img-fluid" width="100">
+                    </a>
+
+                    <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                        <li>
+                            <a href="index.html" class="nav-link text-dark">
+                                <i class="fa-solid fa-house d-block mx-auto mb-1 text-center"></i>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html" class="nav-link text-dark">
+                                <i class="fa-solid fa-store d-block mx-auto mb-1 text-center"></i>
+                                Products
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="nav-link text-dark">
+                                <i class="fa-solid fa-circle-info d-block mx-auto mb-1 text-center"></i>
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="nav-link text-dark">
+                                <i class="fa-solid fa-id-card-clip d-block mx-auto mb-1 text-center"></i>
+                                Contact Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="sitemap.html" class="nav-link text-dark">
+                                <i class="fa-solid fa-sitemap d-block mx-auto mb-1 text-center"></i>
+                                Sitemap
+                            </a>
+                        </li>
+                        <li>
+                            <a href="feedback.html" class="nav-link text-dark">
+                                <i class="fa-solid fa-comment-dots d-block mx-auto mb-1 text-center"></i>                  Feedback
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+<div class="my-5 container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-7 col-lg-8">
+          <h4 class="mb-3">Billing address</h4>
+          <form class="needs-validation" novalidate="">
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label for="firstName" class="form-label">First name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                <div data-lastpass-icon-root="" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div><div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="lastName" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+  
+              <div class="col-12">
+                <label for="username" class="form-label">Username</label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text">@</span>
+                  <input type="text" class="form-control" id="username" placeholder="Username" required="">
+                <div data-lastpass-icon-root="" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div><div class="invalid-feedback">
+                    Your username is required.
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-12">
+                <label for="email" class="form-label">Email <span class="text-body-secondary">(Optional)</span></label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                <div class="invalid-feedback">
+                  Please enter a valid email address for shipping updates.
+                </div>
+              </div>
+  
+              <div class="col-12">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+                <div class="invalid-feedback">
+                  Please enter your shipping address.
+                </div>
+              </div>
+  
+              <div class="col-12">
+                <label for="address2" class="form-label">Address 2 <span class="text-body-secondary">(Optional)</span></label>
+                <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+              </div>
+  
+              <div class="col-md-5">
+                <label for="country" class="form-label">Country</label>
+                <select class="form-select" id="country" required="">
+                  <option value="">Choose...</option>
+                  <option>Pakistan</option>
+                  <option>United States</option>
+                  <option>India</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid country.
+                </div>
+              </div>
+  
+              <div class="col-md-4">
+                <label for="state" class="form-label">State</label>
+                <select class="form-select" id="state" required="">
+                  <option value="">Choose...</option>
+                  <option>Karachi</option>
+                  <option>Lahore</option>
+                  <option>Quetta</option>
+                  <option>Islamabad</option>
+                  <option>Faislabad</option>
+
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+  
+              <div class="col-md-3">
+                <label for="zip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="zip" placeholder="" required="">
+                <div class="invalid-feedback">
+                  Zip code required.
+                </div>
+              </div>
+            </div>
+  
+            <hr class="my-4">
+  
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="same-address">
+              <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
+            </div>
+  
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="save-info">
+              <label class="form-check-label" for="save-info">Save this information for next time</label>
+            </div>
+  
+            <hr class="my-4">
+  
+            <h4 class="mb-3">Payment</h4>
+  
+            <div class="my-3">
+              <div class="form-check">
+                <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
+                <label class="form-check-label" for="credit">Credit card</label>
+              </div>
+              <div class="form-check">
+                <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required="">
+                <label class="form-check-label" for="debit">Debit card</label>
+              </div>
+              <div class="form-check">
+                <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required="">
+                <label class="form-check-label" for="paypal">PayPal</label>
+              </div>
+            </div>
+  
+            <div class="row gy-3">
+              <div class="col-md-6">
+                <label for="cc-name" class="form-label">Name on card</label>
+                <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                <div data-lastpass-icon-root="" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div><small class="text-body-secondary">Full name as displayed on card</small>
+                <div class="invalid-feedback">
+                  Name on card is required
+                </div>
+              </div>
+  
+              <div class="col-md-6">
+                <label for="cc-number" class="form-label">Credit card number</label>
+                <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                <div class="invalid-feedback">
+                  Credit card number is required
+                </div>
+              </div>
+  
+              <div class="col-md-3">
+                <label for="cc-expiration" class="form-label">Expiration</label>
+                <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+                <div class="invalid-feedback">
+                  Expiration date required
+                </div>
+              </div>
+  
+              <div class="col-md-3">
+                <label for="cc-cvv" class="form-label">CVV</label>
+                <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                <div class="invalid-feedback">
+                  Security code required
+                </div>
+              </div>
+            </div>
+  
+            <hr class="my-4">
+  
+            <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+          </form>
+        </div>
+  </div>
+</div>
+<div class="themeBack mt-4">
+    <div class="container-fluid">
+        <footer class="text-light py-5 pb-0">
+            <div class="row">
+              <div class="col-6 col-md-2 mb-3">
+                <h5>Quick Links</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-light">HOME</a></li>
+                  <li class="nav-item mb-2"><a href="products.html" class="nav-link p-0 text-light">PRODUCTS</a></li>
+                  <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-light">CONTACT US</a></li>
+                  <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-light">ABOUT US</a></li>
+                  <li class="nav-item mb-2"><a href="feedback.html" class="nav-link p-0 text-light">FEEDBACK</a></li>
+                  <li class="nav-item mb-2"><a href="sitemap.html" class="nav-link p-0 text-light">SITEMAP</a></li>
+                </ul>
+              </div>
+        
+              <div class="col-6 col-md-2 mb-3">
+                <h5>Categories</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="products.html" class="nav-link p-0 text-light">INDOOR PLANTS</a></li>
+                  <li class="nav-item mb-2"><a href="products.html" class="nav-link p-0 text-light">OUTDOOR PLANTS</a></li>
+                  <li class="nav-item mb-2"><a href="products.html" class="nav-link p-0 text-light">SEASONAL FLOWERS</a></li>
+                  <li class="nav-item mb-2"><a href="products.html" class="nav-link p-0 text-light">FLOWER PLANTS</a></li>
+                  <li class="nav-item mb-2"><a href="products.html" class="nav-link p-0 text-light">TREES</a></li>
+                  <li class="nav-item mb-2"><a href="products.html" class="nav-link p-0 text-light">CLIMBERS</a></li>
+                  <li class="nav-item mb-2"><a href="products.html" class="nav-link p-0 text-light">GROUND COVERS</a></li>
+                </ul>
+              </div>
+              <div class="col-md-5 offset-md-1 mb-3">
+                <form>
+                  <h5>Subscribe to our newsletter</h5>
+                  <p>Monthly digest of what's new and exciting from us.</p>
+                  <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                    <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                    <div data-lastpass-icon-root="" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div><button class="btn btn-primary" type="button">Subscribe</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+        
+            <div class=" d-flex flex-column flex-sm-row justify-content-center py-2 mb-0 border-top">
+              <p>© 2024 Company, Inc. All rights reserved.</p>
+              <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+              </ul>
+            </div>
+          </footer>
+    </div>
+</div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+    </script>
+</body>
+
+</html>
