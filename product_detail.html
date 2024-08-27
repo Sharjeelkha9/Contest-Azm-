@@ -65,6 +65,11 @@
                                 <i class="fa-solid fa-comment-dots d-block mx-auto mb-1 text-center"></i>                  Feedback
                             </a>
                         </li>
+                        <li>
+                            <i type="icon" class="fa fa-shopping-cart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="font-size:35px; position:relative; margin-top: 10px;">
+                                <span id="item-count" style="position:absolute; top:0; right:0; background:red; color:white; border-radius:50%; padding:2px 5px; font-size:14px;">0</span>
+                              </i>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -101,16 +106,29 @@
                 </button>
             </div>
         </div>
+        <div id="offcanvasRight" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">Added items</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-content">
+                <div id="cart-items"></div>
+                <div id="cart-summary">
+                    <p>Total: Rs:<span id="cart-total">0</span></p>
+                   <a href="checkout.html"> <button class=" fs-5 btn btn-light btn-lg mb-4 btn-sm" id="checkout-button">Checkout</button></a>
+                </div>
+            </div>
+        </div>
 
         <!-- Product Details -->
         <div class="col-md-6 py-5">
-            <h1 class="mb-3">Bamboo Palm</h1>
+            <h1 class="mb-3" id="data-name">Bamboo Palm</h1>
             <p class="fs-5 lead text-muted mb-3">With dense foliage and lush fronds, the Bamboo Palm makes a statement. An air-purifying plant adaptable to low light, this palm can reach heights of up to 8 feet tall in the right conditions.</p>
-            <h2 class="text-success mb-3">1500</h2>
+            <h2 class="text-success mb-3" id="data-price">1500</h2>
             <p class="fs-5 mb-3"><span class="badge bg-success">In Stock</span></p>
             
             
-            <button class="fs-4 btn btn-light btn-lg mb-4 btn-sm">Buy Now</button>
+            <button class="add-to-cart fs-4 btn btn-light btn-lg mb-4 btn-sm" data-name = "Bamboo Palm" data-price="1500">Add to Cart</button>
             <a href="checkout.html"><button class="fs-4 btn btn-light btn-lg mb-4 btn-sm">Checkout</button></a>
 
             
@@ -420,6 +438,115 @@
                 // instead of a settings object
             ]
         });
+            //   ADD TO CART BUTTON
+
+document.addEventListener("DOMContentLoaded", function(event) {
+  
+  
+  const cartButtons = document.querySelectorAll('.cart-button');
+
+   cartButtons.forEach(button => {
+
+            button.addEventListener('click',cartClick);
+
+   });
+
+   function cartClick(){
+    let button =this;
+    button.classList.add('clicked');
+   }
+  
+  
+  
+});
+ //   ADD TO CART OFFCANVASE
+ let cart = [];
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        const cartItemsContainer = document.getElementById('cart-items');
+        const cartTotalElement = document.getElementById('cart-total');
+        const itemCountElement = document.getElementById('item-count');
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const itemId = button.getAttribute('data-id');
+                const itemName = button.getAttribute('data-name');
+                const itemPrice = button.getAttribute('data-price');
+
+                const item = {
+                    id: itemId,
+                    name: itemName,
+                    price: Number(itemPrice)
+                };
+
+                addItemToCart(item);
+            });
+        });
+
+        
+function addItemToCart(item) {
+    const existingItem = cart.find(cartItem => cartItem.id === item.id);
+
+    if (existingItem) {
+        existingItem.quantity++;
+    } else {
+        item.quantity = 1;
+        cart.push(item);
+    }
+
+    updateCartDisplay();
+}
+
+function updateCartDisplay() {
+    cartItemsContainer.innerHTML = '';
+
+    cart.forEach(item => {
+                const cartItemElement = document.createElement('div');
+                cartItemElement.classList.add('cart-item');
+                cartItemElement.innerHTML = `
+                    <h4>${item.name} (x${item.quantity})</h4>
+                    <p>Rs.${(item.price * item.quantity).toFixed(2)}</p>
+                    <button class="fs-5 btn btn-light btn-lg mb-4 btn-sm" onclick="removeItemFromCart(${item.id})">Remove</button>
+                `;
+                cartItemsContainer.appendChild(cartItemElement);
+            });
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            cartTotalElement.textContent = total.toFixed(2);
+
+            const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+            itemCountElement.textContent = itemCount;
+        }
+
+        function removeItemFromCart(itemId) {
+            cart = cart.filter(item => item.id !== itemId);
+            updateCartDisplay();
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.remove-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            let cartItem = this.closest('.cart-item');
+            if (cartItem) {
+                let itemId = cartItem.getAttribute('data-id');
+
+                // // Remove the item from the UI
+                //  cartItem.remove();
+                  // Optionally, make an AJAX call to update the backend
+                  fetch(`/remove-item/${itemId}`, { method: 'DELETE' })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            // Optionally do something on success
+                        } else {
+                            // Handle failure
+                            console.error('Failed to remove item:', data.message);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            }
+        });
+    });
+});
     </script>
 </body>
 
